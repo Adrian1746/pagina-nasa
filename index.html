@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171632" />
+  <meta name="description" content="Juguemos a encontrar: un atlas de historias sobre las huellas que dejaron las misiones espaciales." />
+  <title>Juguemos a encontrar — Atlas espacial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="Juguemos a encontrar, inicio"><span class="wordmark-symbol" aria-hidden="true">✳</span><span>JUGUEMOS <b>A ENCONTRAR</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">☰</button>
+    <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
+      <a href="#historia">La historia</a><a href="#archivo">Explorar huellas</a><a href="#juegos">Zona de juegos</a>
+    </nav>
+    <a class="header-link" href="#archivo">Iniciar exploración <span>↗</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-noise" aria-hidden="true"></div><div class="hero-orbit orbit-a" aria-hidden="true"></div><div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-star">✳</span> NASA SPACE APPS CHALLENGE 2026 <span class="eyebrow-sep">/</span> ABANDONADOS PERO NO OLVIDADOS</p>
+        <h1 id="heroTitle">El espacio<br />dejó pistas.<br /><em>Vamos a<br />encontrarlas.</em></h1>
+        <p class="hero-lede">Una aventura para descubrir los equipos que cumplieron su misión y dejaron su huella por el sistema solar.</p>
+        <a class="pill-button" href="#archivo">Explorar el atlas <span>↓</span></a>
+        <div class="hero-meta"><span>PROYECTO</span><b>Juguemos a encontrar</b><span class="meta-rule"></span><span>EDICIÓN 2026</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustración original de una luna y una sonda en su órbita">
+        <div class="hero-moon"><div class="moon-texture"></div><span class="moon-crater crater-one"></span><span class="moon-crater crater-two"></span><span class="moon-crater crater-three"></span><span class="moon-ink">LA LUNA<br />GUARDA<br />HUELLAS</span></div>
+        <svg class="hero-satellite" viewBox="0 0 240 150" role="img" aria-label="Sonda espacial ilustrada"><g class="satellite-float"><path d="M112 73 48 51 45 96l67-9M133 72l65-26 6 43-70-5" fill="#f6ce75" stroke="#171632" stroke-width="4"/><path d="m118 54 34 21-31 25-31-26z" fill="#f17f62" stroke="#171632" stroke-width="5"/><path d="m119 56 1-25 12-9 13 9-11 24M124 100l-4 20 14 10 13-10-15-20" fill="#ffebc5" stroke="#171632" stroke-width="4"/><circle cx="120" cy="77" r="8" fill="#171632"/><path d="M88 73 65 70M153 72l21-10M117 101l-4 21" fill="none" stroke="#171632" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="49" r="4" fill="#fff0b6"/><circle cx="198" cy="92" r="4" fill="#fff0b6"/></g></svg>
+        <div class="orbit-label orbit-label-a"><span>01—13</span><b>OBJETOS<br />ENCONTRADOS</b></div><div class="orbit-label orbit-label-b"><span>SEÑAL DETECTADA</span><b>◉ ◉ ◉ ○</b></div>
+        <span class="hero-spark spark-a">✦</span><span class="hero-spark spark-b">✧</span><span class="hero-spark spark-c">·</span>
+        <div class="hero-stamp" aria-hidden="true"><span>MAPA</span><b>∞</b><span>ESPACIAL</span></div>
+      </div>
+      <div class="hero-bottom"><span>DESLIZA PARA COMENZAR</span><span class="hero-bottom-line"></span><span>01 / 04</span></div>
+    </section>
+
+    <section class="story section-paper" id="historia">
+      <div class="section-index reveal"><span>01</span><span class="index-rule"></span><span>LA HISTORIA DE LOS LANZAMIENTOS</span></div>
+      <div class="story-layout">
+        <div class="story-heading reveal"><p class="mini-label">UNA HISTORIA POR CONTAR</p><h2>Todo empieza<br />con una <i>pregunta.</i></h2><div class="scribble" aria-hidden="true">↘</div></div>
+        <div class="story-card reveal"><div class="story-card-mark">✳</div><p class="story-placeholder" id="launchStory">[EDITAR EN app.js: escribe aquí la historia de los lanzamientos espaciales.]</p><span class="edit-hint">ESPACIO DE CONTENIDO · EDITABLE EN app.js</span></div>
+      </div>
+      <div class="story-trail reveal" aria-label="Línea de tiempo editable" id="storyTrail"></div>
+    </section>
+
+    <section class="archive" id="archivo">
+      <div class="archive-top section-index reveal"><span>02</span><span class="index-rule"></span><span>ARCHIVO DE HUELLAS</span><span class="archive-total">13 MISIONES · 6 MUNDOS</span></div>
+      <div class="archive-heading reveal"><div><p class="mini-label">ELIGE UN DESTINO</p><h2>¿Dónde quedó<br /><i>su huella?</i></h2></div><div class="archive-intro"><p>Cada ficha abre una historia. Busca una misión o elige un cuerpo celeste para empezar.</p><label class="search-field"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar en el atlas…" aria-label="Buscar una misión" /><button id="clearSearch" type="button" aria-label="Borrar búsqueda" hidden>×</button></label></div></div>
+      <div class="destination-tabs reveal" id="destinationTabs" role="group" aria-label="Filtrar por destino"></div>
+      <div class="destination-banner reveal" id="destinationBanner"></div>
+      <div class="mission-grid" id="missionGrid" aria-live="polite"></div>
+      <p class="archive-note"><span>✳</span> Los campos vacíos se pueden completar editando <code>missions</code> en <code>app.js</code>.</p>
+    </section>
+
+    <section class="games section-paper" id="juegos">
+      <div class="section-index reveal"><span>03</span><span class="index-rule"></span><span>ZONA DE JUEGOS</span></div>
+      <div class="games-intro reveal"><div><p class="mini-label">TU MISIÓN, TU MANERA</p><h2>Aprender también<br />es <i>jugar.</i></h2></div><p class="games-description" id="gamesIntro">[EDITAR EN app.js: agrega aquí una introducción a los juegos.]</p></div>
+      <div class="module-grid reveal" id="gameModules"></div>
+      <!-- Para integrar juegos de otros compañeros, agrega objetos a gameModules en app.js.
+           Cada objeto puede mostrar una descripción y un enlace de integración (por ejemplo, Genially). -->
+    </section>
+
+    <section class="team-section">
+      <div class="team-orbit" aria-hidden="true"><span>✳</span><i></i></div>
+      <div class="team-content reveal"><p class="mini-label">EQUIPO DE EXPLORACIÓN</p><h2>Curiosidad<br /><i>en órbita.</i></h2><p id="teamCopy" class="team-placeholder">[EDITAR EN app.js: presenta aquí al equipo.]</p><div class="team-list" id="teamList"></div></div>
+      <div class="team-illustration" aria-hidden="true"><div class="team-sun"></div><div class="team-planet planet-one"></div><div class="team-planet planet-two"></div><span class="team-cross">✳</span><span class="team-caption">GENTE CURIOSA<br />HACIENDO PREGUNTAS</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#inicio"><span class="wordmark-symbol">✳</span><span>JUGUEMOS <b>A ENCONTRAR</b></span></a><p>NASA Space Apps Challenge 2026<br />Abandonados pero no olvidados</p><a href="#inicio" class="footer-top">VOLVER ARRIBA ↑</a></footer>
+
+  <dialog class="mission-dialog" id="missionDialog" aria-labelledby="dialogTitle"><div class="dialog-inner"><button class="dialog-close" id="dialogClose" aria-label="Cerrar ficha">×</button><div id="missionDetail"></div></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
